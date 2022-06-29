@@ -10,8 +10,4 @@ sealed class Screen(
     object Calls: Screen("Calls", "Calls")
     object Chats: Screen("Chats", "Chats")
     object Status: Screen("Status", "Status")
-
-    /*CALLS(title = ),
-    CHATS(title = "Chats"),
-    STATUS(title = "Status")*/
 }

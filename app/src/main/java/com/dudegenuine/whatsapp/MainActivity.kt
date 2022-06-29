@@ -1,21 +1,24 @@
 package com.dudegenuine.whatsapp
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.dudegenuine.whatsapp.ui.compose.navigation.MainGraph
 import com.dudegenuine.whatsapp.ui.compose.navigation.Screen
-import com.dudegenuine.whatsapp.ui.compose.screen.main.MainViewModel
+import com.dudegenuine.whatsapp.ui.compose.component.TabsPanel
+import com.dudegenuine.whatsapp.ui.vm.main.MainViewModel
 import com.dudegenuine.whatsapp.ui.compose.state.ScreenState
 import com.dudegenuine.whatsapp.ui.theme.WhatsappTheme
 
@@ -26,22 +29,31 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val screenState: State<ScreenState?> = viewModel.screenStateFlow.collectAsState()
+            val initialScreen by remember{ mutableStateOf(Screen.Chats) }
             val controller = rememberNavController()
 
             WhatsappTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background) {
-                    MainGraph(
-                        controller = controller,
-                        viewModel = viewModel,
-                        startDestination = Screen.Chats.route
+                Column {
+                    TopAppBar(
+                        title = { Text(getString(R.string.app_name), color = Color.White) },
+                        elevation = 0.dp
                     )
+                    TabsPanel(initialScreen){
+                        viewModel.onScreenStateFlowChange(ScreenState.Navigate.To(it.route))
+                    }
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colors.background) {
+                        MainGraph(
+                            controller = controller,
+                            viewModel = viewModel,
+                            startDestination = initialScreen.route
+                        )
+                    }
                 }
             }
             LaunchedEffect(screenState.value){
-                Log.d("TAG", "onCreate: trigger ${screenState.value}")
                 when(screenState.value){
                     is ScreenState.Navigate.To ->
                         with(screenState.value as ScreenState.Navigate.To){ controller.navigate(route, option) }
@@ -51,16 +63,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-/*
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    WhatsappTheme {
-        Greeting("Android")
-    }
-}*/

@@ -1,4 +1,4 @@
-package com.dudegenuine.whatsapp.ui.compose.screen.main
+package com.dudegenuine.whatsapp.ui.vm.main
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

@@ -1,14 +1,14 @@
 package com.dudegenuine.whatsapp.ui.compose.navigation
 
 import androidx.compose.foundation.clickable
-import androidx.compose.material3.Text
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.dudegenuine.whatsapp.ui.compose.screen.main.MainViewModel
+import com.dudegenuine.whatsapp.ui.vm.main.MainViewModel
 import com.dudegenuine.whatsapp.ui.compose.state.ScreenState
 
 /**
