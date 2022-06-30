@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dudegenuine.whatsapp.domain.model.Chat
 import com.dudegenuine.whatsapp.domain.model.User
+import com.dudegenuine.whatsapp.ui.compose.component.ImageView
 
 /**
  * Thu, 30 Jun 2022
@@ -26,18 +27,21 @@ import com.dudegenuine.whatsapp.domain.model.User
 @Composable
 fun ChatsItemView(chat: Chat, onDetailView: (User) -> Unit) {
     Box(
-        modifier = Modifier.fillMaxWidth().padding(top = 4.dp, bottom = 4.dp).clickable {
-            onDetailView(
-                User(
-                    id = 2,
-                    chat.name,
-                    chat.url
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 4.dp, bottom = 4.dp)
+            .clickable {
+                onDetailView(
+                    User(
+                        id = 2,
+                        chat.name,
+                        chat.url
+                    )
                 )
-            )
-        }) {
+            }) {
         Row(modifier = Modifier.padding(10.dp)) {
             Surface(shape = CircleShape, modifier = Modifier.size(40.dp)) {
-                /*ImageLoader(chat.url)*/
+                ImageView(url = chat.url)
             }
             Spacer(modifier = Modifier.requiredSize(12.dp))
             Column(modifier = Modifier.weight(3.0f, true)) {
@@ -94,7 +98,9 @@ private fun SetupUnreadCount(count: String) {
 
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Box(
-            modifier = Modifier.requiredSize(20.dp).background(shape = CircleShape, color = MaterialTheme.colors.primarySurface),
+            modifier = Modifier
+                .requiredSize(20.dp)
+                .background(shape = CircleShape, color = MaterialTheme.colors.primarySurface),
             contentAlignment = Alignment.Center) {
             Text(
                 text = count,

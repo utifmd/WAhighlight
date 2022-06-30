@@ -1,7 +1,6 @@
 package com.dudegenuine.whatsapp.ui.compose.navigation
 
 import android.net.Uri
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
@@ -17,7 +16,6 @@ import com.dudegenuine.whatsapp.ui.compose.screen.call.CallsView
 import com.dudegenuine.whatsapp.ui.compose.screen.chat.ChatScreenView
 import com.dudegenuine.whatsapp.ui.compose.screen.chat.ChatView
 import com.dudegenuine.whatsapp.ui.compose.screen.status.StatusView
-import com.dudegenuine.whatsapp.ui.compose.utility.Constants
 import com.dudegenuine.whatsapp.ui.vm.main.MainViewModel
 import com.dudegenuine.whatsapp.ui.compose.utility.Constants.EMPTY_STRING
 import com.dudegenuine.whatsapp.ui.compose.utility.Constants.URI_PARAM_USER_DATA
@@ -41,6 +39,7 @@ fun MainGraph(
         startDestination = startDestination){
         composable(route = Screen.Home.route){
             TabbedPager(modifier,
+                startScreen = Screen.Home.Chat,
                 pages = viewPager){ page ->
                 Surface(
                     modifier = modifier,
@@ -61,7 +60,7 @@ fun MainGraph(
         composable(route = Screen.Home.Chat.Detail.routeWithArgs(
             "{$URI_PARAM_USER_DATA}")){ entry ->
             val params: String = entry.arguments?.getString(URI_PARAM_USER_DATA) ?: EMPTY_STRING
-            val user = Constants.gson().fromJson(params, User::class.java)
+            val user = Gson().fromJson(params, User::class.java)
             ChatScreenView(
                 user = user.copy(id = 2, imageUrl = Uri.decode(user.imageUrl)),
                 onBackIconClick = viewModel::onBackPressed){ message ->

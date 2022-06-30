@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -15,15 +16,18 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dudegenuine.whatsapp.domain.model.Conversation
+import com.dudegenuine.whatsapp.ui.theme.ColorPrimaryDark
+import com.dudegenuine.whatsapp.ui.theme.ColorPrimaryLight
 
 /**
  * Wed, 29 Jun 2022
  * Whatsapp by utifmd
  **/
 @Composable
-fun ChatsScrollView(chat: List<Conversation>) {
+fun ChatsScrollView(chat: List<Conversation>, paddingValues: PaddingValues) {
     LazyColumn(
-        modifier = Modifier.fillMaxHeight().padding(10.dp).padding(bottom = 40.dp)) { /*.background(color = colorLightGreen())*/
+        contentPadding = paddingValues,
+        verticalArrangement = Arrangement.spacedBy(8.dp)) { /*.padding(10.dp).padding(bottom = 40.dp)*/
         items(chat){
             if (it.id == 2) {
                 SetupRecipientChat(it)
@@ -32,25 +36,19 @@ fun ChatsScrollView(chat: List<Conversation>) {
             }
         }
     }
-    //Spacer(modifier = Modifier.padding(8.dp))
 }
 
 @Composable
 private fun SetupMyChat(chat: Conversation) {
     Surface(
-        color = Color(38, 82, 72),
+        color = MaterialTheme.colors.primary.copy(alpha = 0.1f),
         modifier = Modifier.fillMaxWidth().padding(80.dp, end = 10.dp),
         shape = RoundedCornerShape(8.dp)) {
         Row(modifier = Modifier.padding(all = 10.dp)) {
             Column(modifier = Modifier.weight(3.0f, true)) {
                 Text(
                     text = chat.chat,
-                    style = TextStyle(
-                        fontSize = 16.sp,
-                        color = Color.White
-                    ),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
+                    style = MaterialTheme.typography.body2
                 )
             }
         }
@@ -60,19 +58,13 @@ private fun SetupMyChat(chat: Conversation) {
 @Composable
 private fun SetupRecipientChat(chat: Conversation) {
     Surface(
-        color = Color(62, 61, 64),
+        color = MaterialTheme.colors.primary.copy(0.5f),
         modifier = Modifier.fillMaxWidth().padding(10.dp, end = 80.dp),
         shape = RoundedCornerShape(8.dp)) {
         Row(modifier = Modifier.padding(10.dp)) {
             Column(modifier = Modifier.weight(3.0f, true)) {
-                Text(
-                    text = chat.chat,
-                    style = TextStyle(
-                        fontSize = 16.sp,
-                        color = Color.White
-                    ),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
+                Text(chat.chat,
+                    style = MaterialTheme.typography.body2
                 )
             }
         }

@@ -1,9 +1,12 @@
 package com.dudegenuine.whatsapp.ui.compose.screen.call
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Divider
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import com.dudegenuine.whatsapp.data.local.calls
 
 /**
@@ -12,7 +15,7 @@ import com.dudegenuine.whatsapp.data.local.calls
  **/
 @Composable
 fun CallsView() {
-    LazyColumn { /*, modifier = Modifier.background(color = colorLightGreen())*/
+    LazyColumn {
         items(calls) { call ->
             CallsItem(call)
             Divider()

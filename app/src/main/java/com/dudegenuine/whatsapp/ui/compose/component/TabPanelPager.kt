@@ -1,16 +1,14 @@
 package com.dudegenuine.whatsapp.ui.compose.component
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.material.Tab
-import androidx.compose.material.TabRow
-import androidx.compose.material.TabRowDefaults
+import androidx.compose.material.*
 import androidx.compose.material.TabRowDefaults.tabIndicatorOffset
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
+import com.dudegenuine.whatsapp.R
 import com.dudegenuine.whatsapp.ui.compose.navigation.Screen
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
@@ -25,19 +23,26 @@ import kotlinx.coroutines.launch
 @ExperimentalPagerApi
 @Composable
 fun TabbedPager(
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier, startScreen: Screen,
     pages: List<Screen>,
     content: @Composable PagerScope.(page: Int) -> Unit){
     val scope = rememberCoroutineScope()
-    val pagerState = rememberPagerState()
+    val pagerState = rememberPagerState(initialPage = pages.indexOf(startScreen))
 
     fun seekToPage(page: Int) = scope.launch {
         pagerState.animateScrollToPage(page)
     }
 
     Column {
+        TopAppBar(
+            title = { Text(stringResource(R.string.app_name), color = Color.White) },
+            /*backgroundColor = MaterialTheme.colors.primary,*/
+            elevation = 0.dp
+        )
         TabRow(
             modifier = modifier,
+            /*backgroundColor = MaterialTheme.colors.primary,
+            contentColor = MaterialTheme.colors.onBackground,*/
             // Our selected tab is our current page
             selectedTabIndex = pagerState.currentPage,
             // Override the indicator, using the provided pagerTabIndicatorOffset modifier

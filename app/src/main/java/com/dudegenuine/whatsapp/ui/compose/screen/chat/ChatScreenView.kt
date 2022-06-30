@@ -16,8 +16,8 @@ fun ChatScreenView(user: User, onBackIconClick: () -> Unit, onMessageSend: (Stri
         topBar = {
             ChatTopBar(user, onBackIconClick)
         },
-        content = {
-            ChatsScrollView(chat.toList())
+        content = { padding ->
+            ChatsScrollView(chat.toList(), padding)
         }
     )
 }

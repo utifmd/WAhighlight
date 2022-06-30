@@ -27,7 +27,7 @@ class MainViewModel: ViewModel() {
         viewModelScope.launch { _screenStateFlow.emit(state) }
     }
     fun onDetailView(user: User){
-        val params = Constants.gson().toJson(user.copy(imageUrl = Uri.encode(user.imageUrl)))
+        val params = Gson().toJson(user.copy(imageUrl = Uri.encode(user.imageUrl)))
         onNavigateTo(Screen.Home.Chat.Detail.routeWithArgs(params))
     }
     fun onNavigateTo(route: String, option: NavOptions? = null) =

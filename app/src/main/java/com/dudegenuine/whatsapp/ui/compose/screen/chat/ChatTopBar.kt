@@ -1,9 +1,6 @@
 package com.dudegenuine.whatsapp.ui.compose.screen.chat
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -16,6 +13,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dudegenuine.whatsapp.domain.model.User
+import com.dudegenuine.whatsapp.ui.compose.component.ImageView
 
 /**
  * Wed, 29 Jun 2022
@@ -26,27 +24,26 @@ fun ChatTopBar(user: User, onBackIconClick: () -> Unit) {
 
     Column {
         TopAppBar(
+            backgroundColor = MaterialTheme.colors.primary,
             navigationIcon = {
-                IconButton(onClick = {
-                    onBackIconClick()
-                }) {
+                IconButton(onBackIconClick) {
                     Icon(
                         imageVector = Icons.Default.ArrowBack,
-                        modifier = Modifier.padding(start = 8.dp),
                         tint = Color.White, contentDescription = null
                     )
                 }
             },
             actions = {
-                Surface(shape = CircleShape, modifier = Modifier.size(40.dp)) {
-                    /*ImageLoader(user.imageUrl)*/
+                Row(modifier = Modifier.padding(horizontal = 8.dp)) {
+                    Surface(shape = CircleShape, modifier = Modifier.size(40.dp)) {
+                        ImageView(url = user.imageUrl)
+                    }
                 }
             },
             title = {
                 Text(
                     text = user.name,
-                    color = Color.White,
-                    style = TextStyle(fontSize = 18.sp, textAlign = TextAlign.Center)
+                    style = MaterialTheme.typography.body1,
                 )
             }
         )
