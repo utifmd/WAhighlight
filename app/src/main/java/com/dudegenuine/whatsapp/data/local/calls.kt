@@ -331,7 +331,6 @@ val statusList = mutableListOf<Status>().apply {
 
 }.toList()
 
-
 val chat = mutableListOf<Conversation>().apply {
     add(Conversation(1, "Hey"))
     add(Conversation(2, "Hey"))

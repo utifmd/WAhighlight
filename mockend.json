@@ -1,0 +1,259 @@
+{
+    "calls": [
+        {
+            "name" :"Shahrukh Khan",
+            "imageUrl": "https://static.toiimg.com/thumb/msid-69902898,imgsize-115506,width-800,height-600,resizemode-75/69902898.jpg",
+            "time": "Yesterday",
+            "status": "call_received"
+        },
+        {
+            "name" :"Salman Khan",
+            "imageUrl": "https://starsunfolded.com/wp-content/uploads/2013/08/Salman-Khan-picsss.jpg",
+            "time": "Friday",
+            "status": "call_missed"
+        },
+        {
+            "name" :"Akshay Kumar",
+            "imageUrl": "https://images.outlookindia.com/public/uploads/articles/2019/12/7/Akshay-Kumar-3_571_855.jpg",
+            "time": "Thursday",
+            "status": "call_missed"
+        },
+        {
+            "name" :"Aamir Khan",
+            "imageUrl": "https://filmfare.wwmindia.com/content/2020/apr/aamirkhan41588085012.jpg",
+            "time": "Monday",
+            "status": "call_received"
+        },
+        {
+            "name" :"Amitabh Bachan",
+            "imageUrl": "https://c.tribune.com.pk/2017/11/1551269-amitabhbachancopy-1509963604.jpg",
+            "time": "22/04/20",
+            "status": "call_missed"
+        },
+        {
+            "name" :"Kartik Aryan",
+            "imageUrl": "https://imagevars.gulfnews.com/2018/12/03/TAB_181130_Kartik_Aaryan_AKK_16a08539c08_medium.jpg",
+            "time": "18/04/20",
+            "status": "call_received"
+        },
+        {
+            "name" :"Saif Ali Khan",
+            "imageUrl": "https://images.khaleejtimes.com/storyimage/KT/20181015/ARTICLE/181019430/AR/0/AR-181019430.jpg&MaxW=780&imageVersion=16by9&NCS_modified=20181015110716",
+            "time": "10/04/20",
+            "status": "call_received"
+        },
+        {
+            "name" :"Shahid Kapoor",
+            "imageUrl": "https://static.toiimg.com/thumb/msid-71336384,width-800,height-600,resizemode-75,imgsize-32094/71336384.jpg",
+            "time": "9/04/20",
+            "status": "call_missed"
+        },
+        {
+            "name" :"Vicky Kaushal",
+            "imageUrl": "https://static.toiimg.com/thumb/msid-71003675,width-800,height-600,resizemode-75,imgsize-73670,pt-32,y_pad-40/71003675.jpg",
+            "time": "19/03/20",
+            "status": "call_received"
+        },
+        {
+            "name" :"Ayushman Khurana",
+            "imageUrl": "https://pbs.twimg.com/profile_images/1137343534644621312/M4sYuCso_400x400.jpg",
+            "time": "15/03/20",
+            "status": "call_received"
+        },
+        {
+            "name" :"Hritik Roshan",
+            "imageUrl": "https://wikibio.in/wp-content/uploads/2018/12/Hrithik-Roshan-Image.jpg",
+            "time": "12/03/20",
+            "status": "call_received"
+        },
+        {
+            "name" :"Tiger Shroff",
+            "imageUrl": "https://img.etimg.com/thumb/width-640,height-480,imgsize-408708,resizemode-1,msid-72224533/tiger-shroff-scrapes-his-back-on-baaghi-3-set-posts-pictures-on-social-media.jpg",
+            "time": "1/03/20",
+            "status": "call_missed"
+        },
+        {
+            "name" :"Ritesh Deshmukh",
+            "imageUrl": "https://filmfare.wwmindia.com/content/2018/dec/thu1545049017.jpg",
+            "time": "20/02/20",
+            "status": "call_missed"
+        }
+    ],
+    "chats": [
+        {
+            "name": "Shahrukh Khan",
+            "url": "https://static.toiimg.com/thumb/msid-69902898,imgsize-115506,width-800,height-600,resizemode-75/69902898.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "Yesterday",
+            "badge": 0
+        },
+        {
+            "name": "Salman Khan",
+            "url": "https://starsunfolded.com/wp-content/uploads/2013/08/Salman-Khan-picsss.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "Friday",
+            "badge": 0
+        },
+        {
+            "name": "Akshay Kumar",
+            "url": "https://images.outlookindia.com/public/uploads/articles/2019/12/7/Akshay-Kumar-3_571_855.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "Thursday",
+            "badge": 2
+        },
+        {
+            "name": "Aamir Khan",
+            "url": "https://filmfare.wwmindia.com/content/2020/apr/aamirkhan41588085012.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "Monday",
+            "badge": 5
+        },
+        {
+            "name": "Amitabh Bachan",
+            "url": "https://c.tribune.com.pk/2017/11/1551269-amitabhbachancopy-1509963604.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "22/04/20",
+            "badge": 6
+        },
+        {
+            "name": "Kartik Aryan",
+            "url": "https://imagevars.gulfnews.com/2018/12/03/TAB_181130_Kartik_Aaryan_AKK_16a08539c08_medium.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "18/04/20",
+            "badge": 7
+        },
+        {
+            "name": "Saif Ali Khan",
+            "url": "https://images.khaleejtimes.com/storyimage/KT/20181015/ARTICLE/181019430/AR/0/AR-181019430.jpg&MaxW=780&imageVersion=16by9&NCS_modified=20181015110716",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "10/04/20",
+            "badge": 1
+        },
+        {
+            "name": "Shahid Kapoor",
+            "url": "https://static.toiimg.com/thumb/msid-71336384,width-800,height-600,resizemode-75,imgsize-32094/71336384.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "9/04/20",
+            "badge": 0
+        },
+        {
+            "name": "Vicky Kaushal",
+            "url": "https://static.toiimg.com/thumb/msid-71003675,width-800,height-600,resizemode-75,imgsize-73670,pt-32,y_pad-40/71003675.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "19/03/20",
+            "badge": 0
+        },
+        {
+            "name": "Ayushman Khurana",
+            "url": "https://pbs.twimg.com/profile_images/1137343534644621312/M4sYuCso_400x400.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "15/03/20",
+            "badge": 2
+        },
+        {
+            "name": "Hritik Roshan",
+            "url": "https://wikibio.in/wp-content/uploads/2018/12/Hrithik-Roshan-Image.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "12/03/20",
+            "badge": 5
+        },
+        {
+            "name": "Tiger Shroff",
+            "url": "https://img.etimg.com/thumb/width-640,height-480,imgsize-408708,resizemode-1,msid-72224533/tiger-shroff-scrapes-his-back-on-baaghi-3-set-posts-pictures-on-social-media.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "1/03/20",
+            "badge": 3
+        },
+        {
+            "name": "Ritesh Deshmukh",
+            "url": "https://filmfare.wwmindia.com/content/2018/dec/thu1545049017.jpg",
+            "chat": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+            "time": "20/02/20",
+            "badge": 9
+        }
+    ],
+    "status": [
+        {
+            "name": "Shahrukh Khan",
+            "imageUrl": "https://static.toiimg.com/thumb/msid-69902898,imgsize-115506,width-800,height-600,resizemode-75/69902898.jpg",
+            "time": "Today, 4.50 pm"
+        },
+        {
+            "name": "Salman Khan",
+            "imageUrl": "https://starsunfolded.com/wp-content/uploads/2013/08/Salman-Khan-picsss.jpg",
+            "time": "Today, 10.00 am"
+        },
+        {
+            "name": "Akshay Kumar",
+            "imageUrl": "https://images.outlookindia.com/public/uploads/articles/2019/12/7/Akshay-Kumar-3_571_855.jpg",
+            "time": "Thursday"
+        },
+        {
+            "name": "Aamir Khan",
+            "imageUrl": "https://filmfare.wwmindia.com/content/2020/apr/aamirkhan41588085012.jpg",
+            "time": "Monday"
+        },
+        {
+            "name": "Amitabh Bachan",
+            "imageUrl": "https://c.tribune.com.pk/2017/11/1551269-amitabhbachancopy-1509963604.jpg",
+            "time": "22/04/20"
+        },
+        {
+            "name": "Kartik Aryan",
+            "imageUrl": "https://imagevars.gulfnews.com/2018/12/03/TAB_181130_Kartik_Aaryan_AKK_16a08539c08_medium.jpg",
+            "time": "18/04/20"
+        },
+        {
+            "name": "Saif Ali Khan",
+            "imageUrl": "https://images.khaleejtimes.com/storyimage/KT/20181015/ARTICLE/181019430/AR/0/AR-181019430.jpg&MaxW=780&imageVersion=16by9&NCS_modified=20181015110716",
+            "time": "10/04/20"
+        },
+        {
+            "name": "Shahid Kapoor",
+            "imageUrl": "https://static.toiimg.com/thumb/msid-71336384,width-800,height-600,resizemode-75,imgsize-32094/71336384.jpg",
+            "time": "9/04/20"
+        },
+        {
+            "name": "Vicky Kaushal",
+            "imageUrl": "https://static.toiimg.com/thumb/msid-71003675,width-800,height-600,resizemode-75,imgsize-73670,pt-32,y_pad-40/71003675.jpg",
+            "time": "19/03/20"
+        },
+        {
+            "name": "Ayushman Khurana",
+            "imageUrl": "https://pbs.twimg.com/profile_images/1137343534644621312/M4sYuCso_400x400.jpg",
+            "time": "15/03/20"
+        },
+        {
+            "name": "Hritik Roshan",
+            "imageUrl": "https://wikibio.in/wp-content/uploads/2018/12/Hrithik-Roshan-Image.jpg",
+            "time": "12/03/20"
+        },
+        {
+            "name": "Tiger Shroff",
+            "imageUrl": "https://img.etimg.com/thumb/width-640,height-480,imgsize-408708,resizemode-1,msid-72224533/tiger-shroff-scrapes-his-back-on-baaghi-3-set-posts-pictures-on-social-media.jpg",
+            "time": "1/03/20"
+        },
+        {
+            "name": "Ritesh Deshmukh",
+            "imageUrl": "https://filmfare.wwmindia.com/content/2018/dec/thu1545049017.jpg",
+            "time": "20/02/20"
+        }
+    ],
+    "conversation": [
+        {"id": 1, "chat": "Hey"},
+        {"id": 2, "chat": "Hey"},
+        {"id": 1, "chat": "Wassup"},
+        {"id": 1, "chat": "How have you been?"},
+        {"id": 2, "chat": "I am good"},
+        {"id": 1, "chat": "Hey"},
+        {"id": 2, "chat": "Hey"},
+        {"id": 1, "chat": "Wassup"},
+        {"id": 1, "chat": "How have you been?"},
+        {"id": 2, "chat": "I am good"},
+        {"id": 1, "chat": "Hey"},
+        {"id": 2, "chat": "Hey"},
+        {"id": 1, "chat": "Wassup"},
+        {"id": 1, "chat": "How have you been?"},
+        {"id": 2, "chat": "I am good"}
+    ]
+}
