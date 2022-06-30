@@ -7,7 +7,21 @@ package com.dudegenuine.whatsapp.ui.compose.navigation
 sealed class Screen(
     val title: String = "Tab", val route: String) {
 
-    object Calls: Screen("Calls", "Calls")
-    object Chats: Screen("Chats", "Chats")
-    object Status: Screen("Status", "Status")
+    fun routeWithArgs(vararg args: String): String {
+        return buildString {
+            append(route)
+
+            args.forEach { arg ->
+                append("/$arg")
+            }
+        }
+    }
+
+    object Home: Screen("Home", "home"){
+        object Call: Screen("Call", "HomeCall")
+        object Chat: Screen("Chat", "HomeChat"){
+            object Detail: Screen("Detail", "HomeChatDetail")
+        }
+        object Status: Screen("Status", "HomeStatus")
+    }
 }

@@ -64,7 +64,7 @@ dependencies {
     implementation "androidx.compose.foundation:foundation-layout:$compose_version"
 
     //implementation "com.google.accompanist:accompanist-swiperefresh:$accompanist_swiperefresh_version"
-    //implementation "com.google.accompanist:accompanist-pager:$accompanist_pager_version"
+    implementation "com.google.accompanist:accompanist-pager:0.23.0"
     
     // Coroutines
     implementation "androidx.core:core-ktx:$ktx_version"
