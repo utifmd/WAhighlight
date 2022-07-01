@@ -6,7 +6,7 @@ import com.dudegenuine.whatsapp.data.remote.model.Chat
 import com.dudegenuine.whatsapp.data.remote.model.Conversation
 import com.dudegenuine.whatsapp.data.remote.model.Status
 
-val calls = mutableListOf<Call>().apply {
+/*val calls = mutableListOf<Call>().apply {
     add(
         Call(
             "Shahrukh Khan",
@@ -329,7 +329,7 @@ val statusList = mutableListOf<Status>().apply {
         )
     )
 
-}.toList()
+}.toList()*/
 
 val chat = mutableListOf<Conversation>().apply {
     add(Conversation(1, "Hey"))
