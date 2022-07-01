@@ -1,5 +1,6 @@
 package com.dudegenuine.whatsapp.ui.compose.screen.status
 
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.MaterialTheme
@@ -13,9 +14,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.dudegenuine.whatsapp.domain.model.Status
+import com.dudegenuine.whatsapp.data.remote.model.Status
 import com.dudegenuine.whatsapp.ui.compose.component.ImageView
-import com.dudegenuine.whatsapp.ui.theme.ColorPrimary
+import com.dudegenuine.whatsapp.ui.theme.ColorPrimaryLight
 
 /**
  * Wed, 29 Jun 2022
@@ -30,7 +31,7 @@ fun StatusItemView(status: Status) {
             .fillMaxWidth()) {
         Row(verticalAlignment = Alignment.CenterVertically) {
 
-            Surface(shape = CircleShape, modifier = Modifier.size(40.dp)) {
+            Surface(shape = CircleShape, modifier = Modifier.border((2.5).dp, color = ColorPrimaryLight, shape = CircleShape).size(50.dp)) {
                 ImageView(url = status.imageUrl)
             }
             Column(modifier = Modifier.padding(start = 16.dp)) {

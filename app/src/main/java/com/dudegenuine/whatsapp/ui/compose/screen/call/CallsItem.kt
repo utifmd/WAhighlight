@@ -14,9 +14,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.dudegenuine.whatsapp.domain.model.Call
+import com.dudegenuine.whatsapp.data.remote.model.Call
 import com.dudegenuine.whatsapp.ui.compose.component.ImageView
-import com.dudegenuine.whatsapp.ui.theme.ColorPrimary
 
 /**
  * Wed, 29 Jun 2022

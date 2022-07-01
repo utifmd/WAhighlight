@@ -12,13 +12,13 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.ViewCompat
 
 private val DarkColorScheme = darkColors(
-    primary = ColorPrimary,
-    background = ColorPrimaryDark.copy(alpha = 0.8f),
+    primary = WhatsAppThemeColor,
+    primaryVariant = WhatsAppFloatIconColor,
 )
 
 private val LightColorScheme = lightColors(
-    primary = ColorPrimary,
-    background = ColorPrimaryLight.copy(alpha = 0.2f),
+    primary = WhatsAppThemeColor,
+    primaryVariant = WhatsAppFloatIconColor,
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),

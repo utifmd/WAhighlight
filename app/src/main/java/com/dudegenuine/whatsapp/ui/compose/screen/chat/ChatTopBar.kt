@@ -8,11 +8,8 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.dudegenuine.whatsapp.domain.model.User
+import com.dudegenuine.whatsapp.data.remote.model.User
 import com.dudegenuine.whatsapp.ui.compose.component.ImageView
 
 /**

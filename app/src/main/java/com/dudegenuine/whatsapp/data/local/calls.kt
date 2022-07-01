@@ -1,10 +1,10 @@
 package com.dudegenuine.whatsapp.data.local
 
 import com.dudegenuine.whatsapp.R
-import com.dudegenuine.whatsapp.domain.model.Call
-import com.dudegenuine.whatsapp.domain.model.Chat
-import com.dudegenuine.whatsapp.domain.model.Conversation
-import com.dudegenuine.whatsapp.domain.model.Status
+import com.dudegenuine.whatsapp.data.remote.model.Call
+import com.dudegenuine.whatsapp.data.remote.model.Chat
+import com.dudegenuine.whatsapp.data.remote.model.Conversation
+import com.dudegenuine.whatsapp.data.remote.model.Status
 
 val calls = mutableListOf<Call>().apply {
     add(

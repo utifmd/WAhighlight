@@ -10,7 +10,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.dudegenuine.whatsapp.data.local.addChat
-import com.dudegenuine.whatsapp.domain.model.User
+import com.dudegenuine.whatsapp.data.remote.model.User
 import com.dudegenuine.whatsapp.ui.compose.component.TabbedPager
 import com.dudegenuine.whatsapp.ui.compose.screen.call.CallsView
 import com.dudegenuine.whatsapp.ui.compose.screen.chat.ChatScreenView
@@ -32,7 +32,7 @@ fun MainGraph(
     modifier: Modifier = Modifier,
     controller: NavHostController, viewModel: MainViewModel, startDestination: String) {
     val viewPager = remember{
-        mutableListOf(Screen.Home.Call, Screen.Home.Chat, Screen.Home.Status)
+        mutableListOf(Screen.Home.Status, Screen.Home.Chat, Screen.Home.Call)
     }
     NavHost(
         navController = controller,
@@ -42,12 +42,11 @@ fun MainGraph(
                 startScreen = Screen.Home.Chat,
                 pages = viewPager){ page ->
                 Surface(
-                    modifier = modifier,
-                    color = MaterialTheme.colors.background) {
+                    modifier = modifier) {
                     when(viewPager[page]){
-                        is Screen.Home.Chat -> ChatView(viewModel::onDetailView)
-                        is Screen.Home.Call -> CallsView()
-                        is Screen.Home.Status -> StatusView()
+                        is Screen.Home.Chat -> ChatView(viewModel)
+                        is Screen.Home.Call -> CallsView(viewModel)
+                        is Screen.Home.Status -> StatusView(viewModel)
                         else -> {}
                     }
                 }
@@ -63,9 +62,9 @@ fun MainGraph(
             val user = Gson().fromJson(params, User::class.java)
             ChatScreenView(
                 user = user.copy(id = 2, imageUrl = Uri.decode(user.imageUrl)),
-                onBackIconClick = viewModel::onBackPressed){ message ->
+                onBackIconClick = viewModel::onBackPressed)/*{ message ->
                 if (message.isNotBlank()) addChat(message)
-            }
+            }*/
         }
     }
 }

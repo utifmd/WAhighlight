@@ -12,4 +12,6 @@ object Constants {
     const val URI_PARAM_USER_NAME = "URI_PARAM_USER_NAME"
     const val URI_PARAM_USER_IMG_URL = "URI_PARAM_USER_IMG_URL"
     const val EMPTY_STRING = ""
+    const val NO_RESULT = "No result"
+    const val NO_INTERNET = "Try again later, Check your internet connection"
 }

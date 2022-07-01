@@ -16,8 +16,8 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.dudegenuine.whatsapp.domain.model.Chat
-import com.dudegenuine.whatsapp.domain.model.User
+import com.dudegenuine.whatsapp.data.remote.model.Chat
+import com.dudegenuine.whatsapp.data.remote.model.User
 import com.dudegenuine.whatsapp.ui.compose.component.ImageView
 
 /**
